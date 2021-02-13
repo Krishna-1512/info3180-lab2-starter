@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block main %}
+ <div class="container">
+    <header>
+         <img src="{{url_for('static', filename='/picture/me.jpeg')}}"alt="">
+         <h1>{{ name }}</h1>
+         <h4>{{ tag }}</h4>
+         <h4>{{ location}}</h4>
+         <h4>Joined, {{ d }} </h4>
+    </header>
+    <div class= "main">
+        <p>
+            I am a 2nd year university student who is studying computer science
+            I find this field fascinating as it mainly surrounds the way in which technology works. 
+            Counting down the days until I am finsihed with this degree and hopefully find a job as soon as I graduate 
+
+        </p>
+
+        <div class="flex-container">
+            <div>7 <br> Posts</div>
+            <div>100 <br> Following</div>
+            <div>250 <br> Followers</div>
+        </div>
+        <button type="button">Follow</button>
+    </div>
+
+     
+     
+ </div>
+{% endblock %} 
+
