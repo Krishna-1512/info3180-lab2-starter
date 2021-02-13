@@ -26,9 +26,10 @@ def about():
 
 @app.route('/profile')
 def profile():
- return render_template('profile.html',d= datetime.datetime.now().strftime("%B, %Y"), name="Krishna", tag="@krish", location = "St.Catherine, Jamaica")
+ return render_template('profile.html',d= format_date_joined(datetime.datetime.now()), name="Krishna", tag="@krish", location = "St.Catherine, Jamaica")
 
-
+def format_date_joined(date):
+    return date.strftime("%B, %Y")
 
 ###
 # The functions below should be applicable to all Flask apps.
